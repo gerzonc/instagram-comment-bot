@@ -4,6 +4,8 @@ const emojis = ["🔥", "⚡️", "💪", "😎", "😍", "😳", "🤯", "👊"
 
 const comment = "Test!"; // SET YOUR COMMENT HERE
 
+const url = "CGz0fzqgeEC/";
+
 /**
  * Uses Puppeteer to access Instagram and comment certain post
  */
@@ -25,7 +27,7 @@ const comment = "Test!"; // SET YOUR COMMENT HERE
     await page.click('button[type="button"]');
     await page.waitForSelector(".SCxLW");
     const page2 = await browser.newPage();
-    await page2.goto("https://www.instagram.com/p/CHi3xTmhtUG/");
+    await page2.goto(`https://www.instagram.com/p/${url}`);
 
     while (true) {
       await page2.waitForSelector("textarea");
