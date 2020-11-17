@@ -32,7 +32,9 @@ const url = "CGz0fzqgeEC/";
     await page2.waitForSelector("textarea");
     await page2.type(
       "textarea",
-      `${comment} ${emojis[Math.floor(Math.random() * 10)]}`
+      `${comment} ${emojis[Math.floor(Math.random() * 10)]}` // CHANGE THE VALUE 10 IN
+                                                             // CASE YOU ADD OR REMOVE
+                                                             // EMOJIS
     );
     await page2.click('button[type="submit"]');
 
@@ -44,7 +46,7 @@ const url = "CGz0fzqgeEC/";
     // SO INSTAGRAM DOESN'T BLOCK YOUR
     // ACTIVITY BECAUSE OF SPAM
 
-    const time = Math.floor(Math.random() * 10000) + 200000;
+    const time = Math.floor(Math.random() * 10000) + 200000; // 200000 ms = 20 MINUTES
     await page2.waitForTimeout(time);
   }
 })();
